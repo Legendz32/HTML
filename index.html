@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me - Legend Zheng</title>
   
-  <!-- Font Import -->
+  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   
-  <!-- Styling -->
+  <!-- Styles -->
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -27,6 +27,7 @@
       text-align: center;
       position: sticky;
       top: 0;
+      z-index: 10;
     }
 
     .navbar__link {
@@ -38,8 +39,9 @@
 
     .hero {
       height: 80vh;
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                  url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1600&q=80') center/cover;
+      background: radial-gradient(circle at 30% 30%, #4a0e4e 0%, #120224 40%, #0b0c10 80%),
+                  linear-gradient(135deg, #0b0c10 0%, #1f2833 100%);
+      background-blend-mode: screen;
       color: white;
       text-align: center;
       display: flex;
@@ -47,11 +49,13 @@
       justify-content: center;
       align-items: center;
       padding: 0 2vw;
+      box-shadow: inset 0 0 80px rgba(102, 252, 241, 0.15);
     }
 
     .hero__title {
       font-size: 3rem;
       margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px rgba(102, 252, 241, 0.5);
     }
 
     .hero__subtitle {
@@ -111,14 +115,15 @@
     }
 
     .meme__image {
-      width: 250px;
+      width: 220px;
+      height: auto;
       border-radius: 8px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+  <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <a href="#home" class="navbar__link">Home</a>
     <a href="#about" class="navbar__link">About</a>
@@ -126,18 +131,18 @@
     <a href="#meme" class="navbar__link">Meme</a>
   </nav>
 
-  <!-- Hero Landing -->
+  <!-- Hero -->
   <header class="hero" id="home">
     <h1 class="hero__title">Legend Zheng</h1>
     <h2 class="hero__subtitle">Junior at Staten Island Technical High School</h2>
     <a href="#about" class="hero__button">Explore Profile</a>
   </header>
 
-  <!-- Main Content -->
+  <!-- Content -->
   <main class="content" id="about">
     <h2>About Me</h2>
     <p class="content__paragraph">
-      Welcome to my personal website. My name is Legend Zheng, and I am currently a junior at Staten Island Technical High School (SITHS). As a student passionate about technology and problem-solving, I dedicate my academic efforts toward mastering computer science fundamentals and software development. Beyond my regular coursework, I actively engage with modern web development practices to build responsive applications.
+      Welcome to my personal website. My name is Legend Zheng, and I am currently a junior at Staten Island Technical High School (SITHS). As a student exploring technology and problem-solving, I am relatively new to computer science, but I am eager to learn programming fundamentals and build cool projects step by step.
     </p>
     
     <p class="content__paragraph">
@@ -145,7 +150,7 @@
       <a class="content__link" href="https://www.siths.org/" target="_blank">Staten Island Technical High School Website</a>.
     </p>
 
-    <!-- Lists Section -->
+    <!-- Lists -->
     <div id="favorites">
       <h3>Favorite Foods</h3>
       <ul>
@@ -156,14 +161,14 @@
 
       <h3>Junior Year Goals</h3>
       <ol>
-        <li>Master web development concepts</li>
+        <li>Learn web development basics</li>
         <li>Maintain strong grades in STEM classes</li>
         <li>Build personal programming projects</li>
       </ol>
     </div>
 
-    <!-- Gallery Section -->
-    <h3>Food Gallery</h3>
+    <!-- Gallery -->
+    <h3>My Favorite Food Gallery</h3>
     <div class="gallery">
       <div>
         <img class="gallery__image" src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=500&q=80" alt="Sushi" />
@@ -179,13 +184,13 @@
       </div>
     </div>
 
-    <!-- Meme Section -->
+    <!-- Meme -->
     <div class="meme" id="meme">
       <h3>School Meme</h3>
       <img
         class="meme__image"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Among_Us_red_character.png/600px-Among_Us_red_character.png"
-        alt="Among Us Character"
+        src="https://upload.wikimedia.org/wikipedia/en/9/9a/Among_Us_Crewmate.png"
+        alt="Among Us Crewmate"
       />
       <p>There is 1 Impostor among us...</p>
     </div>
