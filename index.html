@@ -39,8 +39,7 @@
 
     .hero {
       height: 80vh;
-      background: linear-gradient(rgba(11, 12, 16, 0.65), rgba(11, 12, 16, 0.85)), 
-                  url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      background: radial-gradient(circle at center, #1f2833 0%, #0b0c10 100%);
       color: white;
       text-align: center;
       display: flex;
@@ -98,6 +97,10 @@
       gap: 1rem;
       flex-wrap: wrap;
       margin-top: 1rem;
+    }
+
+    .gallery__item {
+      text-align: center;
     }
 
     .gallery__image {
@@ -170,13 +173,31 @@
     <!-- Gallery -->
     <h3>My Favorite Food Gallery</h3>
     <div class="gallery">
-      <div>
-        <img class="gallery__image" src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=500&q=80" alt="Sushi" />
+      <div class="gallery__item">
+        <img class="gallery__image" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='230' height='150' viewBox='0 0 230 150'><rect width='230' height='150' fill='%230b0c10'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%2366fcf1' font-family='sans-serif' font-size='18'>🍣 Sushi</text></svg>" alt="Sushi" />
         <p>Sushi</p>
       </div>
-      <div>
-        <img class="gallery__image" src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80" alt="Salmon" />
+      <div class="gallery__item">
+        <img class="gallery__image" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='230' height='150' viewBox='0 0 230 150'><rect width='230' height='150' fill='%230b0c10'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%2366fcf1' font-family='sans-serif' font-size='18'>🐟 Salmon</text></svg>" alt="Salmon" />
         <p>Salmon</p>
       </div>
-      <div>
-        <img class
+      <div class="gallery__item">
+        <img class="gallery__image" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='230' height='150' viewBox='0 0 230 150'><rect width='230' height='150' fill='%230b0c10'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%2366fcf1' font-family='sans-serif' font-size='18'>🥩 Fried Pork</text></svg>" alt="Fried Pork" />
+        <p>Fried Pork</p>
+      </div>
+    </div>
+
+    <!-- Meme -->
+    <div class="meme" id="meme">
+      <h3>Meme</h3>
+      <img
+        class="meme__image"
+        src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='200' viewBox='0 0 320 200'><rect width='320' height='200' fill='%230b0c10' rx='8'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%2366fcf1' font-family='sans-serif' font-size='16'>🦈 Tralalero Tralala</text></svg>"
+        alt="Tralalero Tralala Meme"
+      />
+    </div>
+
+  </main>
+
+</body>
+</html>
