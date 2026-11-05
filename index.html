@@ -5,144 +5,192 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me - Legend Zheng</title>
   
+  <!-- Font Import -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styling -->
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f0f2f5;
+      background-color: #0b0c10;
+      color: #c5c6c7;
+      scroll-behavior: smooth;
     }
 
     .navbar {
-      background-color: #1a1a2e;
-      padding: 15px;
+      background-color: #1f2833;
+      padding: 1rem;
       text-align: center;
+      position: sticky;
+      top: 0;
     }
 
-    .navbar a {
-      color: white;
+    .navbar__link {
+      color: #66fcf1;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
+      margin: 0 1rem;
+      font-weight: 600;
     }
 
     .hero {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                        url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1200&q=80');
-      background-size: cover;
-      background-position: center;
+      height: 80vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                  url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1600&q=80') center/cover;
       color: white;
       text-align: center;
-      padding: 80px 20px;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    .hero h2 {
-      font-size: 1.2rem;
-      font-weight: normal;
-      margin-bottom: 20px;
-    }
-
-    .hero button {
-      padding: 10px 20px;
-      font-size: 1rem;
-      background-color: #4a90e2;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-    }
-
-    .food-image {
-      width: 100%;
-      max-width: 300px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin: 10px 0;
-    }
-
-    .image-grid {
       display: flex;
-      gap: 15px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 2vw;
+    }
+
+    .hero__title {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero__subtitle {
+      font-size: 1.25rem;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero__button {
+      padding: 0.75rem 1.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      background-color: #66fcf1;
+      color: #0b0c10;
+      border-radius: 20px;
+      text-decoration: none;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: #1f2833;
+      padding: 2rem;
+      border-radius: 8px;
+    }
+
+    .content__paragraph {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .content__link {
+      color: #66fcf1;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 1rem;
       flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .gallery__image {
+      width: 100%;
+      max-width: 230px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .meme {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .meme__image {
+      width: 250px;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
 
-  <div class="navbar">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#favorites">Favorites</a>
-  </div>
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="navbar__link">Home</a>
+    <a href="#about" class="navbar__link">About</a>
+    <a href="#favorites" class="navbar__link">Favorites</a>
+    <a href="#meme" class="navbar__link">Meme</a>
+  </nav>
 
+  <!-- Hero Landing -->
+  <header class="hero" id="home">
+    <h1 class="hero__title">Legend Zheng</h1>
+    <h2 class="hero__subtitle">Junior at Staten Island Technical High School</h2>
+    <a href="#about" class="hero__button">Explore Profile</a>
+  </header>
 
-  <div class="hero" id="home">
-    <h1>Legend Zheng</h1>
-    <h2>Junior at Staten Island Technical High School</h2>
-    <button type="button">Explore Page</button>
-  </div>
-
-
-  <div class="container" id="about">
+  <!-- Main Content -->
+  <main class="content" id="about">
     <h2>About Me</h2>
-    <p>
-      Hi! My name is Legend Zheng. I am currently a junior at Staten Island Technical High School (SITHS). I am interested in computer science and technology.
+    <p class="content__paragraph">
+      Welcome to my personal website. My name is Legend Zheng, and I am currently a junior at Staten Island Technical High School (SITHS). As a student passionate about technology and problem-solving, I dedicate my academic efforts toward mastering computer science fundamentals and software development. Beyond my regular coursework, I actively engage with modern web development practices to build responsive applications.
     </p>
     
-  
-    <p>
-      Check out my school website: 
-      <a href="https://www.siths.org/" target="_blank">Staten Island Tech</a>
+    <p class="content__paragraph">
+      Visit the 
+      <a class="content__link" href="https://www.siths.org/" target="_blank">Staten Island Technical High School Website</a>.
     </p>
 
-
+    <!-- Lists Section -->
     <div id="favorites">
-      <h3>Favorite Foods (Unordered List)</h3>
+      <h3>Favorite Foods</h3>
       <ul>
         <li>Sushi</li>
         <li>Salmon</li>
         <li>Fried Pork</li>
       </ul>
 
-      <h3>Junior Year Goals (Ordered List)</h3>
+      <h3>Junior Year Goals</h3>
       <ol>
-        <li>Learn HTML and CSS</li>
-        <li>Pass my classes</li>
-        <li>Build personal projects</li>
+        <li>Master web development concepts</li>
+        <li>Maintain strong grades in STEM classes</li>
+        <li>Build personal programming projects</li>
       </ol>
     </div>
 
+    <!-- Gallery Section -->
     <h3>Food Gallery</h3>
-    <div class="image-grid">
+    <div class="gallery">
       <div>
-        <img class="food-image" src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=500&q=80" alt="Sushi" />
+        <img class="gallery__image" src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=500&q=80" alt="Sushi" />
         <p>Sushi</p>
       </div>
       <div>
-        <img class="food-image" src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80" alt="Salmon" />
+        <img class="gallery__image" src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80" alt="Salmon" />
         <p>Salmon</p>
       </div>
       <div>
-        <img class="food-image" src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=500&q=80" alt="Fried Pork" />
+        <img class="gallery__image" src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=500&q=80" alt="Fried Pork" />
         <p>Fried Pork</p>
       </div>
     </div>
 
-  </div>
+    <!-- Meme Section -->
+    <div class="meme" id="meme">
+      <h3>School Meme</h3>
+      <img
+        class="meme__image"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Among_Us_red_character.png/600px-Among_Us_red_character.png"
+        alt="Among Us Character"
+      />
+      <p>There is 1 Impostor among us...</p>
+    </div>
+
+  </main>
 
 </body>
 </html>
