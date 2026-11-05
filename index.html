@@ -39,7 +39,8 @@
 
     .hero {
       height: 80vh;
-      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+      background: linear-gradient(rgba(11, 12, 16, 0.65), rgba(11, 12, 16, 0.85)), 
+                  url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
       color: white;
       text-align: center;
       display: flex;
@@ -47,15 +48,13 @@
       justify-content: center;
       align-items: center;
       padding: 0 2vw;
-      position: relative;
-      box-shadow: inset 0 -50px 50px rgba(11, 12, 16, 0.8);
     }
 
     .hero__title {
       font-size: 3rem;
       margin-bottom: 0.5rem;
       color: #ffffff;
-      text-shadow: 0 0 15px rgba(102, 252, 241, 0.6);
+      text-shadow: 0 0 15px rgba(102, 252, 241, 0.8);
     }
 
     .hero__subtitle {
@@ -114,9 +113,10 @@
       margin-top: 2rem;
     }
 
-    .meme__svg {
-      width: 180px;
+    .meme__image {
+      width: 200px;
       height: auto;
+      border-radius: 8px;
       margin: 1rem 0;
     }
   </style>
@@ -187,9 +187,15 @@
     <!-- Meme -->
     <div class="meme" id="meme">
       <h3>School Meme</h3>
-      <!-- Built-in SVG Crewmate -->
-      <svg class="meme__svg" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
-        <rect x="35" y="60" width="30" height="110" rx="15" fill="#ab0000" stroke="#000000" stroke-width="8"/>
-        <path d="M 60 40 A 50 50 0 0 1 160 40 L 160 170 A 15 15 0 0 1 145 185 L 145 210 A 15 15 0 0 1 115 210 L 115 185 L 105 185 L 105 210 A 15 15 0 0 1 75 210 L 75 185 A 15 15 0 0 1 60 170 Z" fill="#c60000" stroke="#000000" stroke-width="8" stroke-linejoin="round"/>
-        <ellipse cx="130" cy="75" rx="32" ry="20" fill="#71d5e4" stroke="#000000" stroke-width="7"/>
-        <ellipse cx="138" cy="71" rx="18" ry="8
+      <img
+        class="meme__image"
+        src="https://raw.githubusercontent.com/tobi512/Among-Us-Impostor-Game/master/img/red.png"
+        alt="Among Us Character"
+      />
+      <p>There is 1 Impostor among us...</p>
+    </div>
+
+  </main>
+
+</body>
+</html>
